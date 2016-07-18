@@ -1,0 +1,20 @@
+<h2>Your Cart</h2>
+<table>
+  <%= render(cart.line_items) %>
+
+  <tr class="total_line">
+    <td colspan="2">Total</td>
+    <td class="total_cell"><%= currency_to_locale(cart.total_price) %></td>
+  </tr>
+
+</table>
+
+<% unless current_page?(new_order_path) %>
+<!-- START_HIGHLIGHT -->
+<%= button_to "Checkout", new_order_path, method: :get %>
+<!-- END_HIGHLIGHT -->
+<%= button_to 'Empty cart', cart, method: :delete,
+    data: { confirm: 'Are you sure?' } %>
+<% else %>
+  <%= button_to 'Cancel Order', store_path %>
+<% end %>
