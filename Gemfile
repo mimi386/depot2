@@ -7,11 +7,12 @@ gem 'rails', '4.2.0'
 group :development, :test do
 gem 'sqlite3', :require => 'sqlite3'
 end
-#START:mysql
+#START:pg
 group :production do
-  gem 'mysql2', '0.3.18'
+  gem 'pg', '0.17.1'
 end
-#END:mysql
+#END:pg
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -61,3 +62,6 @@ gem 'rvm-capistrano', group: :development
    gem 'minitest', '~>5.1'
    gem 'coffee-script-source', '1.8.0'
    gem 'byebug'
+   
+  gem 'rails_12factor', '0.0.2', group: :production 
+  ruby '2.2.3'
