@@ -10,6 +10,7 @@ end
 #START:pg
 group :production do
   gem 'pg', '0.17.1'
+  gem 'thin', '~>1.7'
 end
 #END:pg
 
