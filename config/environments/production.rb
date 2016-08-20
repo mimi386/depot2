@@ -52,7 +52,7 @@ Depot::Application.configure do
 
   # Set to :debug to see everything in the log.
   config.log_level = :info
-
+  
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
@@ -88,4 +88,6 @@ Depot::Application.configure do
 
   require 'active_support/core_ext/numeric/bytes'
   config.logger = Logger.new(paths['log'].first, 2, 10.megabytes)
+# RAILS_DEFAULT_LOGGER = Logger.new('log/production.log')
+#  config.logger = Logger.new(STDOUT)
 end

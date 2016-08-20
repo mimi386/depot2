@@ -10,6 +10,7 @@ end
 #START:pg
 group :production do
   gem 'pg', '0.17.1'
+  gem 'rails_12factor', '0.0.3'
 end
 #END:pg
 
@@ -66,5 +67,4 @@ gem 'rvm-capistrano', group: :development
    gem 'coffee-script-source', '1.8.0'
    gem 'byebug'
    
-  gem 'rails_12factor', '0.0.2', group: :production 
-  ruby '2.2.3'
+   ruby '2.2.3'
