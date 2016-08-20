@@ -10,10 +10,12 @@ end
 #START:pg
 group :production do
   gem 'pg', '0.17.1'
-  gem 'thin', '~>1.7'
 end
 #END:pg
 
+  platforms :ruby do # Linux
+    gem 'unicorn', '5.0'
+  end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
