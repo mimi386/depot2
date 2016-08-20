@@ -10,6 +10,7 @@ end
 #START:pg
 group :production do
   gem 'pg', '0.17.1'
+  gem 'lograce'
 end
 #END:pg
 
