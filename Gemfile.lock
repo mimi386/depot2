@@ -72,6 +72,10 @@ GEM
       railties (>= 3.2.16)
     json (1.8.3)
     kgio (2.10.0)
+    lograge (0.4.1)
+      actionpack (>= 4, < 5.1)
+      activesupport (>= 4, < 5.1)
+      railties (>= 4, < 5.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -120,11 +124,6 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
-    rails_12factor (0.0.3)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.5)
-    rails_stdout_logging (0.0.5)
     railties (4.2.0)
       actionpack (= 4.2.0)
       activesupport (= 4.2.0)
@@ -186,10 +185,10 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails (= 3.1.1)
   jquery-ui-rails (= 5.0.0)
+  lograge
   minitest (~> 5.1)
   pg (= 0.17.1)
   rails (= 4.2.0)
-  rails_12factor (= 0.0.3)
   rvm-capistrano
   sass-rails (~> 4.0.0)
   sdoc
