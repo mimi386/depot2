@@ -11,6 +11,7 @@ end
 group :production do
   gem 'pg', '0.17.1'
   gem 'lograge'
+  gem 'rails_12factor'
 end
 #END:pg
 
