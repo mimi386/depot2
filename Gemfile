@@ -10,8 +10,7 @@ end
 #START:pg
 group :production do
   gem 'pg', '0.17.1'
-  gem 'lograge'
-  gem 'rails_12factor'
+  gem 'rails_12factor', '0.0.2'
 end
 #END:pg
 

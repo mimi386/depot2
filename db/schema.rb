@@ -48,9 +48,9 @@ ActiveRecord::Schema.define(version: 20160602180049) do
     t.decimal  "price",          precision: 8, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "locale"
     t.string   "title_es"
     t.text     "description_es"
+    t.string   "locale"
   end
 
   create_table "users", force: :cascade do |t|

@@ -20,10 +20,8 @@ test:
 
 #START:production
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: depot_production
+  adapter: sqlite3
+  database: db/production.sqlite3
   pool: 5
-  username: username
-  password: password
+  timeout: 5000 
 #END:production
