@@ -14,9 +14,9 @@ set :domain, 'depot.pragprog.com'
 set :application, 'depot'
 
 # adjust if you are using RVM, remove if you are not
-set :rvm_type, :user
-set :rvm_ruby_string, 'ruby-2.0.0-p247'
-require 'rvm/capistrano'
+#set :rvm_type, :user
+#set :rvm_ruby_string, 'ruby-2.0.0-p247'
+#require 'rvm/capistrano'
 
 # file paths
 set :repository,  "#{user}@#{domain}:git/#{application}.git" 
