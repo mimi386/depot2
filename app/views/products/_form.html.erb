@@ -43,6 +43,18 @@
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
+  <% if I18n.locale.to_s == 'en' %>
+  <h3><%= product.title %></h3>
+  <% end %>
+  <% if I18n.locale.to_s == 'es' %>
+  <h3><%= product.title_es %></h3>
+  <% end %>
+  <% if I18n.locale.to_s == 'en' %>
+  <%=sanatize product.description %>
+  <% end %>
+  <% if I18n.locale.to_s == 'es' %>
+  <%=sanatize product.description_es %>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

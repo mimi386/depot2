@@ -1,131 +1,85 @@
 <!DOCTYPE html>
-<!--
- ! Excerpted from "Agile Web Development with Rails",
- ! published by The Pragmatic Bookshelf.
- ! Copyrights apply to this code. It may not be used to create training material, 
- ! courses, books, articles, and the like. Contact us if you are in doubt.
- ! We make no guarantees that this code is fit for any purpose. 
- ! Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
--->
 
 <html>
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta charset="utf-8">
 
 <title>README - Rails Application Documentation</title>
-
-<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
 </script>
 
-<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
 
 
-<body class="file">
-<nav id="metadata">
-  <nav id="home-section" class="section">
-  <h3 class="section-header">
-    <a href="./index.html">Home</a>
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
     <a href="./table_of_contents.html#classes">Classes</a>
     <a href="./table_of_contents.html#methods">Methods</a>
-  </h3>
-</nav>
+  </div>
+</div>
 
-
-  <nav id="search-section" class="section project-section" class="initially-hidden">
+    <div id="search-section" role="search" class="project-section initially-hidden">
   <form action="#" method="get" accept-charset="utf-8">
-    <h3 class="section-header">
-      <input type="text" name="search" placeholder="Search" id="search-field"
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
              title="Type to search, Up and Down to navigate, Enter to load">
-    </h3>
-  </form>
+    </div>
 
-  <ul id="search-results" class="initially-hidden"></ul>
-</nav>
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-The+Depot+Online+Store">The Depot Online Store</a>
+    <li><a href="#label-Authors">Authors</a>
+    <li><a href="#label-Warranty">Warranty</a>
+    <li><a href="#label-Copyright">Copyright</a>
+  </ul>
+</div>
 
 
   <div id="project-metadata">
-    <nav id="fileindex-section" class="section project-section">
-  <h3 class="section-header">Pages</h3>
-
-  <ul>
-  
-    <li class="file"><a href="./README_rdoc.html">README</a>
-  
-  </ul>
-</nav>
-
-    <nav id="classindex-section" class="section project-section">
-  <h3 class="section-header">Class and Module Index</h3>
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
 
   <ul class="link-list">
   
-    <li><a href="./AdminController.html">AdminController</a>
-  
-    <li><a href="./AdminHelper.html">AdminHelper</a>
-  
-    <li><a href="./ApplicationController.html">ApplicationController</a>
-  
-    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
-  
-    <li><a href="./Cart.html">Cart</a>
-  
-    <li><a href="./CartsController.html">CartsController</a>
-  
-    <li><a href="./CartsHelper.html">CartsHelper</a>
-  
-    <li><a href="./CurrentCart.html">CurrentCart</a>
-  
-    <li><a href="./LineItem.html">LineItem</a>
-  
-    <li><a href="./LineItemsController.html">LineItemsController</a>
-  
-    <li><a href="./LineItemsHelper.html">LineItemsHelper</a>
-  
-    <li><a href="./Order.html">Order</a>
-  
-    <li><a href="./OrderNotifier.html">OrderNotifier</a>
-  
-    <li><a href="./OrdersController.html">OrdersController</a>
-  
-    <li><a href="./OrdersHelper.html">OrdersHelper</a>
-  
-    <li><a href="./Product.html">Product</a>
-  
-    <li><a href="./ProductsController.html">ProductsController</a>
-  
-    <li><a href="./ProductsHelper.html">ProductsHelper</a>
-  
-    <li><a href="./SessionsController.html">SessionsController</a>
-  
-    <li><a href="./SessionsHelper.html">SessionsHelper</a>
-  
-    <li><a href="./StoreController.html">StoreController</a>
-  
-    <li><a href="./StoreHelper.html">StoreHelper</a>
-  
-    <li><a href="./User.html">User</a>
-  
-    <li><a href="./UsersController.html">UsersController</a>
-  
-    <li><a href="./UsersHelper.html">UsersHelper</a>
+    <li><a href="./README_rdoc.html">README</a>
   
   </ul>
-</nav>
+</div>
 
   </div>
 </nav>
 
-<div id="documentation" class="description">
-  
-<h1 id="label-The+Depot+Online+Store">The Depot Online Store</h1>
+<main role="main" aria-label="Page README.rdoc">
+
+<h1 id="label-The+Depot+Online+Store">The Depot Online Store<span><a href="#label-The+Depot+Online+Store">&para;</a> <a href="#top">&uarr;</a></span></h1>
 
 <p>This application implements an online store, with a catalog, cart, and
 orders.</p>
@@ -154,30 +108,29 @@ href="http://www.pragprog.com/titles/rails4/agile-web-development-with-rails-4th
 Web Development with Rails</a>. It should not be  run as a real online
 store.</p>
 
-<h3 id="label-Authors">Authors</h3>
+<h3 id="label-Authors">Authors<span><a href="#label-Authors">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <pre>* Sam Ruby, IBM
 * Dave Thomas, The Pragmatic Programmers, LLC
 * David Heinemeier Hansson, 37signals</pre>
 
-<h3 id="label-Warranty">Warranty</h3>
+<h3 id="label-Warranty">Warranty<span><a href="#label-Warranty">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>This code is provided for educational purposes only, and comes with 
 absolutely no warranty. It should not be used in live applications.</p>
 
-<h2 id="label-Copyright">Copyright</h2>
+<h2 id="label-Copyright">Copyright<span><a href="#label-Copyright">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
 <p>This code is Copyright © 2013 The Pragmatic Programmers, LLC.</p>
 
 <p>It is released under the same license as Ruby.</p>
-
-</div>
-
+</main>
 
 
-<footer id="validator-badges">
-  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
-  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
-  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

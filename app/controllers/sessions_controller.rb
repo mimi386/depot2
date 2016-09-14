@@ -16,12 +16,10 @@ class SessionsController < ApplicationController
     if user and user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect_to admin_url
+    elsif user.nil? and User.count.zero?
+      session[:user_id] = 0
+      redirect_to admin_url
     else
-	if user == nil
-	   user = User.create(name: params[:name], password: params[:password])
-	   session[:user_id] = user.id
-	   redirect_to admin_url
-	end
       redirect_to login_url, alert: "Invalid user/password combination"
     end
   end

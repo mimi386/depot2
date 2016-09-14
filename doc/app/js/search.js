@@ -1,11 +1,3 @@
-/***
- * Excerpted from "Agile Web Development with Rails",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
-***/
 Search = function(data, input, result) {
   this.data = data;
   this.$input = $(input);
@@ -22,7 +14,12 @@ Search.prototype = $.extend({}, Navigation, new function() {
 
   this.init = function() {
     var _this = this;
-    var observer = function() {
+    var observer = function(e) {
+      switch(e.originalEvent.keyCode) {
+        case 38: // Event.KEY_UP
+        case 40: // Event.KEY_DOWN
+          return;
+      }
       _this.search(_this.$input[0].value);
     };
     this.$input.keyup(observer);
@@ -47,9 +44,12 @@ Search.prototype = $.extend({}, Navigation, new function() {
     if (value == '') {
       this.lastQuery = value;
       this.$result.empty();
+      this.$result.attr('aria-expanded', 'false');
       this.setNavigationActive(false);
     } else if (value != this.lastQuery) {
       this.lastQuery = value;
+      this.$result.attr('aria-busy',     'true');
+      this.$result.attr('aria-expanded', 'true');
       this.firstRun = true;
       this.searcher.find(value);
     }
@@ -63,25 +63,32 @@ Search.prototype = $.extend({}, Navigation, new function() {
     }
 
     for (var i=0, l = results.length; i < l; i++) {
-      target.appendChild(this.renderItem.call(this, results[i]));
+      var item = this.renderItem.call(this, results[i]);
+      item.setAttribute('id', 'search-result-' + target.childElementCount);
+      target.appendChild(item);
     };
 
     if (this.firstRun && results.length > 0) {
       this.firstRun = false;
       this.$current = $(target.firstChild);
-      this.$current.addClass('current');
+      this.$current.addClass('search-selected');
     }
     if (jQuery.browser.msie) this.$element[0].className += '';
+
+    if (isLast) this.$result.attr('aria-busy', 'false');
   }
 
   this.move = function(isDown) {
     if (!this.$current) return;
     var $next = this.$current[isDown ? 'next' : 'prev']();
     if ($next.length) {
-      this.$current.removeClass('current');
-      $next.addClass('current');
+      this.$current.removeClass('search-selected');
+      $next.addClass('search-selected');
+      this.$input.attr('aria-activedescendant', $next.attr('id'));
       this.scrollIntoView($next[0], this.$view[0]);
       this.$current = $next;
+      this.$input.val($next[0].firstChild.firstChild.text);
+      this.$input.select();
     }
     return true;
   }

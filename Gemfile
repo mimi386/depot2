@@ -66,5 +66,5 @@ gem 'rvm-capistrano', group: :development
    gem 'minitest', '~>5.1'
    gem 'coffee-script-source', '1.8.0'
    gem 'byebug'
-   gem 'figaro'
+   gem 'lograge'
    ruby '2.2.3'
