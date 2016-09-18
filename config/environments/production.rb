@@ -7,13 +7,14 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 
-config.before_configuration do
+Depot::Application.configure do
+	
+  config.before_configuration do
       I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
       I18n.locale = 'pt-PT'
       I18n.reload!
-    end
-
-Depot::Application.configure do
+    end	
+	
   # Settings specified here will take precedence over those in config/application.rb.
  # config.lograge.enabled = true
   # Code is not reloaded between requests.
