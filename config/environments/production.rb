@@ -6,6 +6,13 @@
 # We make no guarantees that this code is fit for any purpose. 
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
+
+config.before_configuration do
+      I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
+      I18n.locale = 'pt-PT'
+      I18n.reload!
+    end
+
 Depot::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
  # config.lograge.enabled = true
