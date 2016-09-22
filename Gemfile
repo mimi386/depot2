@@ -67,4 +67,5 @@ gem 'rvm-capistrano', group: :development
    gem 'coffee-script-source', '1.8.0'
    gem 'byebug'
    gem 'lograge'
+   gem 'localeapp'
    ruby '2.2.3'
