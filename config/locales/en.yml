@@ -1,5 +1,4 @@
 en:
-
   layouts:
     application:
       title: Pragmatic Bookshelf
@@ -7,18 +6,15 @@ en:
       questions: Questions
       news: News
       contact: Contact
-
   store:
     index:
       title_html: Your Pragmatic Catalog
       add_html: Add to Cart
-
   carts:
     cart:
       title: Your Cart
       checkout: Checkout
       empty: Empty cart
-
   orders:
     new:
       legend: Please Enter Your Details
@@ -26,12 +22,10 @@ en:
       name: Name
       address_html: Address
       email: E-mail
-      payment_type_id: Pay with
+      pay_type: Pay with
       pay_prompt_html: Select a payment method
       submit: Place Order
-
-  thanks: Thank you your order
-
+  thanks: Thank you for your order
   number:
     currency:
       format:
@@ -40,3 +34,27 @@ en:
         separator: "."
         delimiter: ","
         format: "%u%n"
+  activerecord:
+    attributes:
+      order:
+        address: Address
+        email: E-mail
+        name: Name
+        payment_type_id: Pay with
+        pay_type: Pay with
+    models:
+      order: Order
+    errors:
+      messages:
+        inclusion: Not this; included in list
+        blank: don't leave blank
+  errors:
+    template:
+      body: There are problems with the next field
+      header:
+        one: A failure present itself with proceeding of your %{model}
+        other: "%{count} failures present itself with proceding of your %{model}"
+  payment_types:
+    check: check
+    credit_card: credit_card
+    purchase_order: purchase_order

@@ -31,9 +31,7 @@
   <% end %>
         <div class="price_line">
           <span class="price"><%= currency_to_locale(product.price) %></span>
-<!-- START_HIGHLIGHT -->
           <%= button_to t('.add_html'), line_items_path(product_id: product),
-# END_HIGHLIGHT
             remote: true %>
         </div>
       </div>
