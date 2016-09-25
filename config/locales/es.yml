@@ -28,7 +28,7 @@ es:
   thanks: Gracias por su pedido
   payment_types:
     check: Cheque
-    credit_card: Tarjeta de crÃ©dito
+    credit_card: Tarjeta de crédito
     purchase_order: Orden de compra
   activerecord:
     models:
@@ -53,8 +53,9 @@ es:
   number:
     currency:
       format:
-        unit: "â‚¬"
-        precision: "2"
+        unit: "€"
+        precision: 2
         separator: ","
         delimiter: "."
         format: "%n&nbsp;%u"
+
