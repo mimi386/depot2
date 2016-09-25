@@ -40,7 +40,6 @@ en:
         address: Address
         email: E-mail
         name: Name
-        payment_type_id: Pay with
         pay_type: Pay with
     models:
       order: Order
@@ -53,9 +52,8 @@ en:
       body: There are problems with the next field
       header:
         one: A failure present itself with proceeding of your %{model}
-        other: "%{count} failures present itself with proceding of your %{model}"
+        other: "%{count} failures present itself with proceeding of your %{model}"
   payment_types:
     check: check
     credit_card: credit_card
     purchase_order: purchase_order
-
