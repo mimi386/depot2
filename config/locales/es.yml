@@ -58,3 +58,4 @@ es:
         separator: ","
         delimiter: "."
         format: "%n&nbsp;%u"
+
