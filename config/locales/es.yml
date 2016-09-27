@@ -31,7 +31,7 @@ es:
       order: pedido
     attributes:
       order:
-        address: Direcci&oacute;n
+        address_html : Direcci&oacute;n
         name: Nombre
         email: E-mail
         pay_type: Forma de pago
