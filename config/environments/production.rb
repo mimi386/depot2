@@ -26,7 +26,7 @@ Depot::Application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
   #config.paths.add "config/locales", eager_load: true
-  config.eager_load_paths += %W(config/locales)
+  config.eager_load_paths += %W(#{config.root} config/locales)
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
