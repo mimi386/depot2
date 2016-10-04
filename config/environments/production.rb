@@ -14,7 +14,7 @@ Depot::Application.configure do
  #     I18n.locale = :es
 #      I18n.reload!
  #   end	
-	
+ 
   # Settings specified here will take precedence over those in config/application.rb.
  # config.lograge.enabled = true
   # Code is not reloaded between requests.
