@@ -7,8 +7,8 @@ Localeapp.configure do |config|
 config.polling_environments << :production
 
 # the number of seconds to wait between checking for new translations
-# enter `0` to check on every request
-config.poll_interval = 60
+# enter `0` to check on every request 
+config.poll_interval = 0
 
 # when new translations have been downloaded, reload I18n
 config.reloading_environments << :production
