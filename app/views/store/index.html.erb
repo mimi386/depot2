@@ -1,19 +1,35 @@
 <% if notice %>
-	<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 <% end %>
 
-<h1><%= t(".title_html") %></h1>
-<% @products.each do |product| %>
-	<div class="entry">
-		<%= image_tag(product.image_url) %>
-		<h3><%= product.title %></h3>
-		<%= sanitize(product.description) %>
-		<div class="price_line">
-			<span class="price">
-				<%= currency_to_locale(product.price) %>
-			</span>
-			<%= button_to t(".add_html"), 
-						line_items_path(product_id: product) %>
-		</div>
-	</div>
+<!-- START_HIGHLIGHT -->
+<h1><%= t('.title_html') %></h1>
+<!-- END_HIGHLIGHT -->
+
+  <% @products.each do |product| %>
+      <div class="entry">
+        <%= image_tag(product.image_url) %>
+	
+	<% if I18n.locale.to_s == 'en' %>
+	<h3><%= product.title %></h3>
+  <% end %>
+  <% if I18n.locale.to_s == 'es' %>
+  <h3><%= product.title_es %></h3>
+  <% end %>
+  <% if I18n.locale.to_s == 'en' %>
+  <%= sanitize product.description %>
+ <% end %>
+  <% if I18n.locale.to_s == 'es'  %>
+  <%= sanitize product.description_es %>
+  <% end %>
+  <% if I18n.locale.to_s == 'es' and product.description_es == nil %>
+  <%= sanitize product.description %>
+  <% end %>
+        <div class="price_line">
+          <span class="price"><%= currency_to_locale(product.price) %></span>
+          <%= button_to t('.add_html'), line_items_path(product_id: product, locale: I18n.locale),  remote: true %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 <% end %>
